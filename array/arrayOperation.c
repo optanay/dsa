@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-#define MAX 100  // Maximum array capacity
+#define MAX 100  
 
-// Display the array
 void display(int arr[], int n) {
     printf("Array: ");
     for (int i = 0; i < n; i++)
@@ -10,7 +9,6 @@ void display(int arr[], int n) {
     printf("\n");
 }
 
-// Insert 'value' at index 'pos'
 void insert(int arr[], int *n, int pos, int value) {
     if (*n >= MAX) {
         printf("Error: array is full\n");
@@ -26,7 +24,6 @@ void insert(int arr[], int *n, int pos, int value) {
     (*n)++;
 }
 
-// Delete element at index 'pos'
 void delete(int arr[], int *n, int pos) {
     if (pos < 0 || pos >= *n) {
         printf("Error: invalid position\n");
@@ -39,7 +36,7 @@ void delete(int arr[], int *n, int pos) {
 
 int main() {
     int arr[MAX];
-    int n = 0;  // current size
+    int n = 0;  
     int i, pos, val;
 
     // Create: user inputs initial array
