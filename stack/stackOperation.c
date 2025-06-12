@@ -6,17 +6,14 @@
 int stack[MAX];
 int top = -1;
 
-// Check if the stack is full
 int isFull() {
     return top == MAX - 1;
 }
 
-// Check if the stack is empty
 int isEmpty() {
     return top == -1;
 }
 
-// Push: add an element to the top
 void push(int x) {
     if (isFull()) {
         printf("Stack overflow—cannot push %d\n", x);
@@ -26,18 +23,17 @@ void push(int x) {
     printf("Pushed %d\n", x);
 }
 
-// Pop: remove and return the top element
+
 int pop() {
     if (isEmpty()) {
         printf("Stack underflow—cannot pop\n");
-        return -1;  // or another error indicator
+        return -1;  
     }
     int val = stack[top--];
     printf("Popped %d\n", val);
     return val;
 }
 
-// Peek: view the top element without removing
 int peek() {
     if (isEmpty()) {
         printf("Stack is empty—no top element\n");
@@ -47,7 +43,6 @@ int peek() {
     return stack[top];
 }
 
-// Display all elements from top to bottom
 void display() {
     if (isEmpty()) {
         printf("Stack is empty\n");
