@@ -44,7 +44,6 @@ void deleteAtPos(struct Node** head_ref, int pos) {
     free(temp);
 }
 
-// Display all list elements
 void displayList(struct Node* head) {
     struct Node* temp = head;
     printf("List: ");
