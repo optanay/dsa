@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the node structure
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Insert at the end of the list
 void insertEnd(struct Node** head_ref, int value) {
     struct Node* newNode = malloc(sizeof(struct Node));
     newNode->data = value;
@@ -23,7 +21,6 @@ void insertEnd(struct Node** head_ref, int value) {
     }
 }
 
-// Delete a node by position (1-based index)
 void deleteAtPos(struct Node** head_ref, int pos) {
     if (*head_ref == NULL) return;
 
@@ -41,7 +38,7 @@ void deleteAtPos(struct Node** head_ref, int pos) {
         temp = temp->next;
     }
 
-    if (temp == NULL) return; // position out of range
+    if (temp == NULL) return; 
 
     prev->next = temp->next;
     free(temp);
